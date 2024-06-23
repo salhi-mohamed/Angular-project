@@ -1,0 +1,65 @@
+#about {
+  margin-top: 80px; /* Ajustez cette valeur en fonction de la hauteur de votre navbar */
+}
+
+/* Styles précédents inchangés */
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.carousel-item {
+  min-height: 300px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item {
+  transition: transform 0.6s ease;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: block;
+}
+
+#carouselTestimonials .carousel-inner {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
