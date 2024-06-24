@@ -11,7 +11,8 @@
         <p class="section-description">
           Nous croyons fermement que la réussite commence par une planification précise et une exécution disciplinée. Avec notre application, vous pouvez définir des objectifs clairs, suivre vos progrès et rester concentré sur ce qui est important pour vous.
         </p>
-        <a href="javascript:void(0)" (click)="scrollToSection('team')" class="btn btn-primary mt-3">Découvrez notre équipe</a>
+        <a href="javascript:void(0)" id="decouvrez" (click)="scrollToSection('team')" class="btn btn-primary mt-3 mr-3">Découvrez notre équipe</a>
+        <a class="btn btn-primary mt-3 " routerLink="/subscribe">Commencez</a>
       </div>
       <div class="col-md-6 text-center">
         <img src="https://img.freepik.com/vecteurs-libre/employes-recoivent-objectifs-organisationnels-commentaires-gestion-performances-logiciel-gestion-productivite-employes-concept-suivi-performances_335657-736.jpg" alt="À propos de notre application" class="img-fluid rounded-circle shadow-lg">
@@ -127,9 +128,6 @@
       </div>
     </div>
   </div>
-  <button (click)="scrollToSection('mission')">click here</button>
-
 </section>
-<button (click)="scrollToSection('mission')">click here</button>
 
 <app-footer></app-footer>

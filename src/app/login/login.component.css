@@ -130,6 +130,29 @@
   background: linear-gradient(90deg, #7b8492, #988da4e7);
 }
 
+/* Password Strength Indicator */
+.password-strength-wrapper {
+  margin-top: 10px;
+}
+
+.password-strength {
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.weak {
+  background-color: red;
+}
+
+.medium {
+  background-color: orange;
+}
+
+.strong {
+  background-color: green;
+}
+
 @media (max-width: 768px) {
   .login-card {
     padding: 30px;

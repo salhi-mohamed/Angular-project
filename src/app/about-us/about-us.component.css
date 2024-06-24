@@ -63,3 +63,7 @@
 .btn:hover {
   transform: scale(1.1);
 }
+
+#decouvrez {
+  margin-right: 20px; /* Ajustez cette valeur selon l'espace désiré */
+}
