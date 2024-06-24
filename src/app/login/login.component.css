@@ -74,11 +74,11 @@
 
 .login-card {
   background: rgba(255, 255, 255, 0.9);
-  padding: 50px;
+  padding: 80px; /* Further increased padding */
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 500px;
+  max-width: 700px; /* Further increased max-width */
   width: 100%;
   z-index: 2;
   box-sizing: border-box;
@@ -88,6 +88,7 @@
   margin-bottom: 30px;
   color: #333;
   font-family: 'Playfair Display', serif;
+  font-size: 50px;
 }
 
 .form-group {
@@ -98,15 +99,16 @@
 .form-group label {
   display: block;
   font-weight: bold;
+  font-size: 22px; /* Further increased font-size */
   margin-bottom: 10px;
 }
 
 .form-group input {
   width: calc(100% - 24px);
-  padding: 12px;
+  padding: 16px; /* Further increased padding */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 22px; /* Further increased font-size */
   transition: border-color 0.3s ease;
 }
 
@@ -116,8 +118,8 @@
 
 .btn-submit {
   display: inline-block;
-  padding: 12px 40px;
-  font-size: 18px;
+  padding: 16px 60px; /* Further increased padding */
+  font-size: 22px; /* Further increased font-size */
   color: white;
   background: linear-gradient(90deg, #4d4a50, #6a7383);
   border: none;
@@ -128,6 +130,26 @@
 
 .btn-submit:hover {
   background: linear-gradient(90deg, #7b8492, #988da4e7);
+}
+
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link p {
+  font-size: 20px; /* Increased font-size */
+  color: #333;
+}
+
+.signup-link a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  color: #615d65;
 }
 
 /* Password Strength Indicator */
@@ -155,15 +177,24 @@
 
 @media (max-width: 768px) {
   .login-card {
-    padding: 30px;
+    padding: 40px; /* Adjusted padding for smaller screens */
   }
 
   .form-group input {
-    font-size: 16px;
+    font-size: 18px; /* Adjusted font-size for smaller screens */
+    padding: 14px; /* Adjusted padding for smaller screens */
   }
 
   .btn-submit {
-    padding: 10px 30px;
-    font-size: 16px;
+    padding: 14px 50px; /* Adjusted padding for smaller screens */
+    font-size: 20px; /* Adjusted font-size for smaller screens */
   }
+
+  .signup-link p {
+    font-size: 18px; /* Adjusted font-size for smaller screens */
+  }
+}
+.signup-link a {
+  text-decoration: none;
+  color: #3e3c40;
 }

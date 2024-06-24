@@ -1,27 +1,27 @@
- <app-navbar></app-navbar>
- <div class="signup-container">
-    <div class="signup-card">
-      <h1>Sign Up</h1>
-      <form #userform="ngForm"  (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Enter name" aria-label="Name"  [(ngModel)]="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="Enter email" aria-label="Email" [(ngModel)]="email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password"  placeholder="Enter password" aria-label="Password" [(ngModel)]="password" required />
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input id="confirm-password" name="confirm-password" type="password"  placeholder="Confirm password" aria-label="Confirm Password" [(ngModel)]=" confirmPassword" required />
-        </div>
-        <button type="submit" class="btn-submit" (click)="navigateToHome()">Sign Up</button>
-        <p class="login-link">Already have an account ?<a routerLink="/login"> Login</a></p>
-      </form>
-    </div>
+<app-navbar></app-navbar>
+<div class="signup-container">
+  <div class="signup-card">
+    <h1>Sign Up</h1>
+    <form #userform="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter name" aria-label="Name" [(ngModel)]="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter email" aria-label="Email" [(ngModel)]="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password" aria-label="Password" [(ngModel)]="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm password" aria-label="Confirm Password" [(ngModel)]="confirmPassword" required />
+      </div>
+      <button type="submit" class="btn-submit" (click)="navigateToHome()">Sign Up</button>
+      <p class="login-link">Already have an account? <a routerLink="/login">Login</a></p>
+    </form>
   </div>
-  <app-footer></app-footer>
+</div>
+<app-footer></app-footer>

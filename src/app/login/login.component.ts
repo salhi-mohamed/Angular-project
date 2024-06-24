@@ -12,8 +12,6 @@ export class LoginComponent {
   email: string = "";
   password: string = "";
   test1: boolean = false;
-  test2: boolean = false;
-  test3: boolean = false;
   passwordStrength: string = '';
 
   onLogin() {
@@ -27,15 +25,19 @@ export class LoginComponent {
       alert('Please enter a valid email address');
       return;
     }
+    if (this.password.length < 8) {
+      alert('Password must be at least 8 characters long');
+      return;
+    }
+
 
     alert('Login successful!');
     this.test1 = true;
-    this.test2 = true;
-    this.test3 = true;
+    
   }
 
   GoToHome() {
-    if (this.test1 && this.test2 && this.test3) {
+    if (this.test1==true ) {
       this.route.navigate(['/home']);
     }
   }

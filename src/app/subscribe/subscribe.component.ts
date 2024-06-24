@@ -13,14 +13,20 @@ export class SubscribeComponent {
   email: string = "";
   password: string = "";
   confirmPassword: string = "";
+  test:boolean=false
 
   onSubmit() {
     if (!this.name || !this.email || !this.password || !this.confirmPassword) {
       alert('All fields are required');
       return;
     }
-    if (this.password.length < 6) {
-      alert('Password must be at least 6 characters long');
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(this.email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    if (this.password.length < 8) {
+      alert('Password must be at least 8 characters long');
       return;
     }
 
@@ -32,6 +38,7 @@ export class SubscribeComponent {
    
 
     alert('Sign-up successful!');
+    this.test=true
     // Handle actual sign-up logic here
   }
   write(userform:NgForm ):void
@@ -40,6 +47,9 @@ export class SubscribeComponent {
   }
   navigateToHome():void
   {
-    this.route.navigate(['/home'])
+    if (this.test==true){
+      this.route.navigate(['/home'])
+    }
+   
   }
 }
