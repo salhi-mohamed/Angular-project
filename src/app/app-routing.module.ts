@@ -11,7 +11,8 @@ const routes: Routes = [
   {path:"login" , component:LoginComponent},
   {path:"about",component:AboutUsComponent},
   {path:"home",component:HomeComponent},
-  {path:"subscribe" , component:SubscribeComponent}
+  {path:"subscribe" , component:SubscribeComponent},
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
 
 
   
