@@ -1,0 +1,213 @@
+/* Styles for hero section */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+    background: url('https://img.freepik.com/photos-gratuite/perspective-exterieure-personne-boite-vide_1258-260.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1717372800&semt=ais_user') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero-content .col-md-6 {
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+  
+  .hero-content .btn {
+    font-size: 1.2rem;
+  }
+  
+  .hero-content img.rounded-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for features section */
+  .features-section {
+    background-color: #ffffff;
+  }
+  
+  .features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .feature-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-card .card-body {
+    text-align: center;
+  }
+  
+  .feature-card .card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .feature-card .card-text {
+    font-size: 1.2rem;
+  }
+  
+  .features-section .btn {
+    font-size: 1.2rem;
+  }
+  
+  /* Styles for how it works section */
+  .how-it-works-section {
+    background-color: #f8f9fa;
+  }
+  
+  .how-it-works-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .how-it-works-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .how-it-works-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .how-it-works-card .card-body {
+    text-align: center;
+  }
+  
+  .how-it-works-card .card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .how-it-works-card .card-text {
+    font-size: 1.2rem;
+  }
+  
+  /* Styles for latest news section */
+  .latest-news-section {
+    background-color: #ffffff;
+  }
+  
+  .latest-news-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .news-card {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .news-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .news-card .card-body {
+    text-align: center;
+  }
+  
+  .news-card .card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .news-card .card-text {
+    font-size: 1.2rem;
+  }
+  
+  .latest-news-section .btn {
+    font-size: 1.2rem;
+  }
+  
+  /* Styles for tips section */
+  .tips-section {
+    background-color: #f8f9fa;
+  }
+  
+  .tips-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .tips-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .tip-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .tip-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .tip-card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .tip-card p {
+    font-size: 1.2rem;
+  }
+  
+  /* Footer styling */
+  app-footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Adding padding to the bottom of the body to avoid footer overlap */
+  body {
+    padding-bottom: 70px; /* Adjust this value based on your footer height */
+  }
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+    }
+  
+    .hero-content img {
+      margin-top: 20px;
+    }
+  }
+  

@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+  <div class="row">
+    <!-- Définir des Objectifs -->
+    <div class="col-md-4 mb-4">
+      <div class="card interactive-gate" (click)="navigate('/definir-objectifs')">
+        <img src="assets/definir-objectifs.jpg" class="card-img-top" alt="Définir des Objectifs">
+        <div class="card-body">
+          <h5 class="card-title">Définir des Objectifs</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Créer des Listes de Tâches -->
+    <div class="col-md-4 mb-4">
+      <div class="card interactive-gate" (click)="navigate('/creer-listes-de-taches')">
+        <img src="assets/creer-listes-taches.jpg" class="card-img-top" alt="Créer des Listes de Tâches">
+        <div class="card-body">
+          <h5 class="card-title">Créer des Listes de Tâches</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Gérer le Temps -->
+    <div class="col-md-4 mb-4">
+      <div class="card interactive-gate" (click)="navigate('/gerer-le-temps')">
+        <img src="assets/gerer-le-temps.jpg" class="card-img-top" alt="Gérer le Temps">
+        <div class="card-body">
+          <h5 class="card-title">Gérer le Temps</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Feature Highlights Section -->
+  <div class="feature-highlights mt-5">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="mb-3">Explorez nos fonctionnalités</h2>
+        <p class="lead">Chaque outil est conçu pour optimiser votre productivité quotidienne.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-item">
+          <h4>Planification intelligente</h4>
+          <p>Automatisez la planification de vos tâches avec notre algorithme avancé.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item">
+          <h4>Notifications personnalisables</h4>
+          <p>Recevez des rappels adaptés à vos préférences et à votre emploi du temps.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-item">
+          <h4>Analyse de performance</h4>
+          <p>Visualisez vos progrès avec des graphiques détaillés et des rapports d'activité.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
