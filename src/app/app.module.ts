@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeOtherComponent } from './home-other/home-other.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
+
 
 
 
@@ -28,6 +31,7 @@ import { HomeOtherComponent } from './home-other/home-other.component';
                 FooterComponent,
                 HomeComponent,
                 HomeOtherComponent,
+                GoogleCalendarIntegrationComponent,
                 
                 
 
@@ -39,7 +43,8 @@ import { HomeOtherComponent } from './home-other/home-other.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

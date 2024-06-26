@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"subscribe" , component:SubscribeComponent},
   { path: '', redirectTo: 'about', pathMatch: 'full' },
+  {path:'GoogleCalendar' , component:GoogleCalendarIntegrationComponent}
 
 
   
