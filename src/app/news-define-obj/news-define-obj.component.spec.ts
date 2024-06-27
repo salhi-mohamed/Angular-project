@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeOtherComponent } from './home-other.component';
+import { NewsDefineObjComponent } from './news-define-obj.component';
 
-describe('HomeOtherComponent', () => {
-  let component: HomeOtherComponent;
-  let fixture: ComponentFixture<HomeOtherComponent>;
+describe('NewsDefineObjComponent', () => {
+  let component: NewsDefineObjComponent;
+  let fixture: ComponentFixture<NewsDefineObjComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HomeOtherComponent]
+      declarations: [NewsDefineObjComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HomeOtherComponent);
+    fixture = TestBed.createComponent(NewsDefineObjComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

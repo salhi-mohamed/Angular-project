@@ -9,9 +9,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
-import { HomeOtherComponent } from './home-other/home-other.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
+import { InterfaceUpdateNewsComponent } from './interface-update-news/interface-update-news.component';
+import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.component';
 
 
 
@@ -30,8 +31,10 @@ import { GoogleCalendarIntegrationComponent } from './google-calendar-integratio
                 AboutUsComponent,
                 FooterComponent,
                 HomeComponent,
-                HomeOtherComponent,
+                
                 GoogleCalendarIntegrationComponent,
+                                  InterfaceUpdateNewsComponent,
+                                  NewsDefineObjComponent,
                 
                 
 

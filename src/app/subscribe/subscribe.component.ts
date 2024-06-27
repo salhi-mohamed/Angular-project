@@ -14,9 +14,10 @@ export class SubscribeComponent {
   password: string = "";
   confirmPassword: string = "";
   test:boolean=false
-
+  country:string="";
+ dob: string = ''
   onSubmit() {
-    if (!this.name || !this.email || !this.password || !this.confirmPassword) {
+    if (!this.name || !this.email || !this.password || !this.confirmPassword || !this.country || !this.dob) {
       alert('All fields are required');
       return;
     }

@@ -125,11 +125,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn-submit:hover {
   background: linear-gradient(90deg, #7b8492, #988da4e7);
+  transform: translateY(-2px); /* Slightly lift the button on hover */
 }
 
 .signup-link {
@@ -194,6 +195,7 @@
     font-size: 18px; /* Adjusted font-size for smaller screens */
   }
 }
+
 .signup-link a {
   text-decoration: none;
   color: #3e3c40;
