@@ -1,0 +1,108 @@
+<div class="bg-gray-100 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+      <div class="text-center">
+        <h1 class="mt-5 text-4xl font-extrabold text-gray-900">
+          <i class="fas fa-bullseye"></i> Définir des Objectifs
+        </h1>
+      </div>
+      <form #objectiveForm="ngForm" (ngSubmit)="addObjective()" class="mt-8 space-y-6">
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <label for="objective-title" class="sr-only">Titre de l'Objectif</label>
+            <input id="objective-title" name="title" type="text" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Titre de l'Objectif" [(ngModel)]="newObjective.title" required />
+          </div>
+          <div class="mt-3">
+            <label for="objective-description" class="sr-only">Description</label>
+            <textarea id="objective-description" name="description" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Description" [(ngModel)]="newObjective.description" required></textarea>
+          </div>
+          <div class="mt-3">
+            <label for="objective-category" class="sr-only">Catégorie</label>
+            <select id="objective-category" name="category" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.category" required>
+              <option value="Professionnel">Professionnel</option>
+              <option value="Personnel">Personnel</option>
+              <option value="Santé">Santé</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+          <div class="mt-3">
+            <label for="objective-priority" class="sr-only">Priorité</label>
+            <select id="objective-priority" name="priority" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.priority" required>
+              <option value="Haute">Haute</option>
+              <option value="Moyenne">Moyenne</option>
+              <option value="Basse">Basse</option>
+            </select>
+          </div>
+          <div class="mt-3">
+            <label for="objective-status" class="sr-only">Statut</label>
+            <select id="objective-status" name="status" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.status" required>
+              <option value="En cours">En cours</option>
+              <option value="Complété">Complété</option>
+              <option value="En attente">En attente</option>
+            </select>
+          </div>
+          <div class="mt-3">
+            <label for="objective-start" class="sr-only">Date de Début</label>
+            <input id="objective-start" name="startDate" type="date" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.startDate" required />
+          </div>
+          <div class="mt-3">
+            <label for="objective-end" class="sr-only">Date de Fin</label>
+            <input id="objective-end" name="endDate" type="date" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.endDate" required />
+          </div>
+          <div class="mt-3">
+            <label for="objective-tags" class="sr-only">Tags</label>
+            <input id="objective-tags" name="tags" type="text" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Entrez des tags séparés par des virgules" [(ngModel)]="newObjective.tags" />
+          </div>
+          <div class="mt-3">
+            <label for="objective-attachment" class="sr-only">Pièces Jointes</label>
+            <input id="objective-attachment" name="attachment" type="file" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" (change)="onFileChange($event)" />
+          </div>
+          <div class="mt-3">
+            <label for="objective-reminder" class="sr-only">Rappels</label>
+            <div class="flex items-center">
+              <input class="form-check-input h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" type="checkbox" id="reminder-checkbox" [(ngModel)]="newObjective.reminderEnabled" name="reminderEnabled">
+              <label class="ml-2 block text-sm text-gray-900" for="reminder-checkbox">
+                Activer les rappels
+              </label>
+            </div>
+            <input *ngIf="newObjective.reminderEnabled" id="objective-reminder" name="reminder" type="datetime-local" class="mt-2 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.reminder" />
+          </div>
+          <div class="mt-3">
+            <label for="objective-privacy" class="sr-only">Confidentialité</label>
+            <select id="objective-privacy" name="privacy" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="newObjective.privacy" required>
+              <option value="Public">Public</option>
+              <option value="Privé">Privé</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <i class="fas fa-plus-circle mr-2"></i> Ajouter Objectif
+          </button>
+        </div>
+      </form>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title text-2xl font-bold mb-4"><i class="fas fa-list"></i> Objectifs</h2>
+          <ul class="list-group space-y-4">
+            <li class="list-group-item p-4 bg-white rounded shadow" *ngFor="let objective of objectives">
+              <h3 class="text-lg font-bold">{{ objective.title }}</h3>
+              <p><strong>Description:</strong> {{ objective.description }}</p>
+              <p><strong>Catégorie:</strong> {{ objective.category }}</p>
+              <p><strong>Priorité:</strong> {{ objective.priority }}</p>
+              <p><strong>Statut:</strong> {{ objective.status }}</p>
+              <p><strong>Début:</strong> {{ objective.startDate }}</p>
+              <p><strong>Fin:</strong> {{ objective.endDate }}</p>
+              <p><strong>Notes:</strong> {{ objective.notes }}</p>
+              <p><strong>Tags:</strong> {{ objective.tags }}</p>
+              <p *ngIf="objective.attachment"><strong>Pièce Jointe:</strong> {{ objective.attachment.name }}</p>
+              <p *ngIf="objective.reminder"><strong>Rappel:</strong> {{ objective.reminder }}</p>
+              <p><strong>Confidentialité:</strong> {{ objective.privacy }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-footer></app-footer>
+  

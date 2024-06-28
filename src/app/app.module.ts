@@ -13,6 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
 import { InterfaceUpdateNewsComponent } from './interface-update-news/interface-update-news.component';
 import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ObjectivesComponent } from './objectives/objectives.component';
+import { ObjectivessComponent } from './objectivess/objectivess.component';
 
 
 
@@ -35,6 +38,9 @@ import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.compon
                 GoogleCalendarIntegrationComponent,
                                   InterfaceUpdateNewsComponent,
                                   NewsDefineObjComponent,
+                                  SidebarComponent,
+                                  ObjectivesComponent,
+                                  ObjectivessComponent,
                 
                 
 

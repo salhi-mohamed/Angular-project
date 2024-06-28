@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+
+<div class="background-wrapper">
+  <div class="container main-content">
+    <div class="content-wrapper">
+      <h1 class="mt-5"><i class="fas fa-bullseye"></i> Définir des Objectifs</h1>
+      <form #objectiveForm="ngForm" (ngSubmit)="addObjective()">
+        <div class="form-group">
+          <label for="objective-title"><i class="fas fa-flag"></i> Titre de l'Objectif</label>
+          <input id="objective-title" name="title" type="text" class="form-control" placeholder="Entrez le titre de l'objectif" aria-label="Objective Title" [(ngModel)]="newObjective.title" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-description"><i class="fas fa-info-circle"></i> Description</label>
+          <textarea id="objective-description" name="description" class="form-control" placeholder="Entrez la description de l'objectif" aria-label="Objective Description" [(ngModel)]="newObjective.description" required></textarea>
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-category"><i class="fas fa-tags"></i> Catégorie</label>
+          <select id="objective-category" name="category" class="form-control" [(ngModel)]="newObjective.category" required>
+            <option value="Professionnel">Professionnel</option>
+            <option value="Personnel">Personnel</option>
+            <option value="Santé">Santé</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-priority"><i class="fas fa-exclamation-circle"></i> Priorité</label>
+          <select id="objective-priority" name="priority" class="form-control" [(ngModel)]="newObjective.priority" required>
+            <option value="Haute">Haute</option>
+            <option value="Moyenne">Moyenne</option>
+            <option value="Basse">Basse</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-status"><i class="fas fa-tasks"></i> Statut</label>
+          <select id="objective-status" name="status" class="form-control" [(ngModel)]="newObjective.status" required>
+            <option value="En cours">En cours</option>
+            <option value="Complété">Complété</option>
+            <option value="En attente">En attente</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-start"><i class="fas fa-calendar-alt"></i> Date de Début</label>
+          <input id="objective-start" name="startDate" type="date" class="form-control" [(ngModel)]="newObjective.startDate" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-end"><i class="fas fa-calendar-alt"></i> Date de Fin</label>
+          <input id="objective-end" name="endDate" type="date" class="form-control" [(ngModel)]="newObjective.endDate" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-tags"><i class="fas fa-tag"></i> Tags</label>
+          <input id="objective-tags" name="tags" type="text" class="form-control" placeholder="Entrez des tags séparés par des virgules" aria-label="Objective Tags" [(ngModel)]="newObjective.tags" />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-attachment"><i class="fas fa-paperclip"></i> Pièces Jointes</label>
+          <input id="objective-attachment" name="attachment" type="file" class="form-control" (change)="onFileChange($event)" />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-reminder"><i class="fas fa-bell"></i> Rappels</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="reminder-checkbox" [(ngModel)]="newObjective.reminderEnabled" name="reminderEnabled">
+            <label class="form-check-label" for="reminder-checkbox">
+              Activer les rappels
+            </label>
+          </div>
+          <input *ngIf="newObjective.reminderEnabled" id="objective-reminder" name="reminder" type="datetime-local" class="form-control mt-2" [(ngModel)]="newObjective.reminder" />
+        </div>
+        <div class="form-group mt-3">
+          <label for="objective-privacy"><i class="fas fa-user-secret"></i> Confidentialité</label>
+          <select id="objective-privacy" name="privacy" class="form-control" [(ngModel)]="newObjective.privacy" required>
+            <option value="Public">Public</option>
+            <option value="Privé">Privé</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3"><i class="fas fa-plus-circle"></i> Ajouter Objectif</button>
+      </form>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title"><i class="fas fa-list"></i> Objectifs</h2>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let objective of objectives">
+              <h3>{{ objective.title }}</h3>
+              <p><strong>Description:</strong> {{ objective.description }}</p>
+              <p><strong>Catégorie:</strong> {{ objective.category }}</p>
+              <p><strong>Priorité:</strong> {{ objective.priority }}</p>
+              <p><strong>Statut:</strong> {{ objective.status }}</p>
+              <p><strong>Début:</strong> {{ objective.startDate }}</p>
+              <p><strong>Fin:</strong> {{ objective.endDate }}</p>
+              <p><strong>Notes:</strong> {{ objective.notes }}</p>
+              <p><strong>Tags:</strong> {{ objective.tags }}</p>
+              <p *ngIf="objective.attachment"><strong>Pièce Jointe:</strong> {{ objective.attachment.name }}</p>
+              <p *ngIf="objective.reminder"><strong>Rappel:</strong> {{ objective.reminder }}</p>
+              <p><strong>Confidentialité:</strong> {{ objective.privacy }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

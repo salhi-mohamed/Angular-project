@@ -27,7 +27,10 @@
         <label for="country"><i class="fas fa-globe"></i> Country</label>
         <select id="country" name="country" aria-label="Country" [(ngModel)]="country" required>
           <option value="" disabled selected>Select your country</option>
-          <!-- Liste des pays -->
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="France">France</option>
+          <!-- Ajoutez d'autres pays ici -->
         </select>
       </div>
       <button type="submit" class="btn-submit" (click)="navigateToHome()"><i class="fas fa-user-plus"></i> Sign Up</button>

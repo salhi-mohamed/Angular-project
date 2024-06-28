@@ -47,27 +47,27 @@
 
 h1, h2, p, ul {
     color: #333; /* Darker color for text */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif /* Attractive and professional font */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Attractive and professional font */
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 3.2rem; /* Increased font size */
     margin-bottom: 30px; /* Increased margin bottom */
-    color: #434040; /* White color for the main heading */
+    color: #434040; /* Dark color for the main heading */
     text-align: center;
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2.6rem; /* Increased font size */
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #434040; /* White color for subheadings */
+    color: #434040; /* Dark color for subheadings */
 }
 
 p.lead {
-    font-size: 1.6rem;
+    font-size: 2rem; /* Increased font size */
     color: #333; /* Darker color for text */
     line-height: 1.8;
     text-align: justify;
@@ -75,14 +75,14 @@ p.lead {
 }
 
 p.instructions {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased font size */
     color: #333; /* Darker color for text */
     line-height: 1.8;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 ul.instructions-list {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased font size */
     color: #333; /* Darker color for text */
     line-height: 1.8;
     list-style-type: disc;
@@ -104,7 +104,7 @@ img {
 }
 
 button {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Increased font size */
     padding: 12px 24px;
     background-color: #ff6f61;
     border: none;
@@ -133,17 +133,9 @@ h1, h2 {
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /* Adding Icons */
-h1::before {
-    content: "\f021"; /* FontAwesome icon (sync-alt) */
-    font-family: 'FontAwesome';
-    margin-right: 10px;
-}
 
-h2::before {
-    content: "\f059"; /* FontAwesome icon (question-circle) */
-    font-family: 'FontAwesome';
-    margin-right: 10px;
-}
+
+
 
 ul.instructions-list li::before {
     content: "\f054"; /* FontAwesome icon (arrow-right) */
@@ -151,11 +143,7 @@ ul.instructions-list li::before {
     margin-right: 10px;
 }
 
-p.lead::before {
-    content: "\f021"; /* FontAwesome icon (sync-alt) */
-    font-family: 'FontAwesome';
-    margin-right: 10px;
-}
+
 
 p.instructions::before {
     content: "\f058"; /* FontAwesome icon (check-circle) */
@@ -179,14 +167,14 @@ button::before {
     }
 
     h1 {
-        font-size: 3rem; /* Adjusted for smaller screens */
+        font-size: 2.4rem; /* Increased font size for smaller screens */
     }
 
     h2 {
-        font-size: 2.4rem; /* Adjusted for smaller screens */
+        font-size: 2.2rem; /* Increased font size for smaller screens */
     }
 
     p.lead, p.instructions, ul.instructions-list {
-        font-size: 1.3rem; /* Adjusted for smaller screens */
+        font-size: 1.8rem; /* Increased font size for smaller screens */
     }
 }

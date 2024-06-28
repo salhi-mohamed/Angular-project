@@ -1,44 +1,64 @@
-/* footer.component.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
 footer {
-    padding: 50px 0;
-    background-color: #212529;
-    color: #fff;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
+  padding: 50px 0;
+  background-color: #212529;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-heading {
+  font-size: 2rem; /* Increased font size */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer-text {
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.footer-links {
+  font-size: 1.5rem; /* Increased font size */
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-link i {
+  margin-right: 10px;
+}
+
+.social-links a {
+  font-size: 2rem; /* Increased font size */
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .footer-heading {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.8rem; /* Increased font size */
   }
-  
   .footer-text {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Increased font size */
   }
-  
-  .footer-links {
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-  
   .footer-link {
-    color: #adb5bd;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 1.2rem; /* Increased font size */
   }
-  
-  .footer-link:hover {
-    color: #fff;
-    transform: translateX(5px);
-  }
-  
   .social-links a {
-    font-size: 2rem;
-    transition: transform 0.3s ease-in-out;
+    font-size: 1.8rem; /* Increased font size */
   }
-  
-  .social-links a:hover {
-    transform: scale(1.2);
-  }
-  
-  
-  
+}

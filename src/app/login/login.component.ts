@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CheckLoginService } from '../check-login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private route: Router) {}
-
   email: string = "";
   password: string = "";
   test1: boolean = false;
   passwordStrength: string = '';
+
+  constructor(private route: Router, private checkLoginService: CheckLoginService) {}
 
   onLogin() {
     if (!this.email || !this.password) {
@@ -30,14 +31,19 @@ export class LoginComponent {
       return;
     }
 
-
-    alert('Login successful!');
-    this.test1 = true;
-    
+    if (this.checkLoginService.userExists(this.email, this.password)) {
+      alert('Login successful!');
+      this.test1 = true;
+      this.GoToHome();
+    } else if (this.checkLoginService.emailExists(this.email)) {
+      alert('Incorrect password!');
+    } else {
+      alert('User not registered!');
+    }
   }
 
   GoToHome() {
-    if (this.test1==true ) {
+    if (this.test1) {
       this.route.navigate(['/home']);
     }
   }

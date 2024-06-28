@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms'; 
 import { Router } from '@angular/router';
+import { CheckLoginService } from '../check-login.service';
 
 @Component({
   selector: 'app-subscribe',
@@ -8,24 +9,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./subscribe.component.css']
 })
 export class SubscribeComponent {
-  constructor(private route:Router){}
   name: string = "";
   email: string = "";
   password: string = "";
   confirmPassword: string = "";
-  test:boolean=false
-  country:string="";
- dob: string = ''
+  country: string = "";
+  dob: string = "";
+  test: boolean = false;
+  message: string = '';
+
+  constructor(private route: Router, private check: CheckLoginService) {}
+
   onSubmit() {
     if (!this.name || !this.email || !this.password || !this.confirmPassword || !this.country || !this.dob) {
       alert('All fields are required');
       return;
     }
+
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(this.email)) {
       alert('Please enter a valid email address');
       return;
     }
+
     if (this.password.length < 8) {
       alert('Password must be at least 8 characters long');
       return;
@@ -36,21 +42,20 @@ export class SubscribeComponent {
       return;
     }
 
-   
-
-    alert('Sign-up successful!');
-    this.test=true
-    // Handle actual sign-up logic here
-  }
-  write(userform:NgForm ):void
-  {
-    console.log(userform.value.name)
-  }
-  navigateToHome():void
-  {
-    if (this.test==true){
-      this.route.navigate(['/home'])
+    if (this.check.emailExists(this.email)) {
+      alert('Email already registered!');
+      return;
     }
-   
+
+    this.check.addUser(this.email, this.password);
+    alert('Sign-up successful!');
+    this.test = true;
+    this.navigateToHome();
+  }
+
+  navigateToHome(): void {
+    if (this.test) {
+      this.route.navigate(['/home']);
+    }
   }
 }
