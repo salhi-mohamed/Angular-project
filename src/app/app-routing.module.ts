@@ -8,6 +8,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { GoogleCalendarIntegrationComponent } from './google-calendar-integration/google-calendar-integration.component';
 import { InterfaceUpdateNewsComponent } from './interface-update-news/interface-update-news.component';
 import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.component';
+import { ObjectivesComponent } from './objectives/objectives.component';
+import { ListObjectivesComponent } from './list-objectives/list-objectives.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   {path:'GoogleCalendar' , component:GoogleCalendarIntegrationComponent},
   {path:'NewsInterface' , component:InterfaceUpdateNewsComponent},
-  {path:'NewsDefineObj' , component:NewsDefineObjComponent}
+  {path:'NewsDefineObj' , component:NewsDefineObjComponent},
+  {path:'objectives',component:ObjectivesComponent},
+  {path:'list-obj',component:ListObjectivesComponent},
 
 
   

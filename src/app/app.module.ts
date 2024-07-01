@@ -15,7 +15,7 @@ import { InterfaceUpdateNewsComponent } from './interface-update-news/interface-
 import { NewsDefineObjComponent } from './news-define-obj/news-define-obj.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ObjectivesComponent } from './objectives/objectives.component';
-import { ObjectivessComponent } from './objectivess/objectivess.component';
+import { ListObjectivesComponent } from './list-objectives/list-objectives.component';
 
 
 
@@ -40,7 +40,8 @@ import { ObjectivessComponent } from './objectivess/objectivess.component';
                                   NewsDefineObjComponent,
                                   SidebarComponent,
                                   ObjectivesComponent,
-                                  ObjectivessComponent,
+                                  ListObjectivesComponent,
+                                  
                 
                 
 

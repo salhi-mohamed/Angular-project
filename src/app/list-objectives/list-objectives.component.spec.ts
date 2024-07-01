@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObjectivessComponent } from './objectivess.component';
+import { ListObjectivesComponent } from './list-objectives.component';
 
-describe('ObjectivessComponent', () => {
-  let component: ObjectivessComponent;
-  let fixture: ComponentFixture<ObjectivessComponent>;
+describe('ListObjectivesComponent', () => {
+  let component: ListObjectivesComponent;
+  let fixture: ComponentFixture<ListObjectivesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ObjectivessComponent]
+      declarations: [ListObjectivesComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ObjectivessComponent);
+    fixture = TestBed.createComponent(ListObjectivesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

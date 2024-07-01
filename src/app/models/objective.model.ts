@@ -13,5 +13,6 @@ export interface Objective {
     reminderEnabled: boolean;
     reminder: string;
     privacy: string;
+    progress: number;  // Ajout de la propriété progress
   }
   

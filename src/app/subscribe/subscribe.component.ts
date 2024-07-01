@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms'; 
 import { Router } from '@angular/router';
 import { CheckLoginService } from '../check-login.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-subscribe',
@@ -16,9 +16,8 @@ export class SubscribeComponent {
   country: string = "";
   dob: string = "";
   test: boolean = false;
-  message: string = '';
 
-  constructor(private route: Router, private check: CheckLoginService) {}
+  constructor(private route: Router, private check: CheckLoginService, private userService: UserService) {}
 
   onSubmit() {
     if (!this.name || !this.email || !this.password || !this.confirmPassword || !this.country || !this.dob) {
@@ -48,6 +47,12 @@ export class SubscribeComponent {
     }
 
     this.check.addUser(this.email, this.password);
+    this.userService.setUser({
+      name: this.name,
+      email: this.email,
+      dob: this.dob,
+      country: this.country
+    });
     alert('Sign-up successful!');
     this.test = true;
     this.navigateToHome();
@@ -55,7 +60,7 @@ export class SubscribeComponent {
 
   navigateToHome(): void {
     if (this.test) {
-      this.route.navigate(['/home']);
+      this.route.navigate(['/profile']);
     }
   }
 }

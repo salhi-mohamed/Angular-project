@@ -12,7 +12,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   navigate(route: string) {
-    this.router.navigate([route]);
+    this.router.navigate([route])
   }
   scroll(section: string) {
     const element = document.getElementById(section);
